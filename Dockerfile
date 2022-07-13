@@ -11,6 +11,8 @@ COPY ./nest-cli.json ./
 COPY ./tsconfig.build.json ./
 COPY ./tsconfig.json ./
 
+RUN npm install
+RUN npm install express
 RUN npm install -g @nestjs/cli
 RUN npm ci --only=production
 
